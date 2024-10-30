@@ -1,11 +1,15 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, Image } from 'react-native';
 import styles from './styles';
 
 export function Cabecalho() {
   return (
-    <View>
-      
+    <View style={styles.container}>
+      <Image 
+        source={require('../../../assets/logo.jpg')}
+        style={styles.logo}
+        resizeMode="contain"
+      />
     </View>
   );
 }

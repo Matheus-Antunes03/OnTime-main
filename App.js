@@ -1,22 +1,22 @@
 import * as React from 'react';
-import { View, StyleSheet } from 'react-native';
+import styles from './src/AppStyles';
+import { View } from 'react-native';
 import { Rodape } from './src/components/Rodape';
-import AppStyles from './AppStyles';
+import { Cabecalho } from './src/components/Cabecalho';
 
 function App() {
   return (
     <View style={styles.container}>
-      <Rodape />
+      <View style={styles.header}>
+        <Cabecalho />
+      </View>
+      <View style={styles.content}>
+      </View>
+      <View style={styles.footer}>
+        <Rodape />
+      </View>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-});
 
 export default App;
