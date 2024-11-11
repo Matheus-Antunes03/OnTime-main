@@ -9,6 +9,7 @@ import { Carrinho } from './src/components/Carrinho/Carrinho';
 import { Card } from './src/components/Card/Card';
 import { Cabecalho } from './src/components/Cabecalho';
 import { Cabecalho_Voltar } from './src/components/Cabecalho_Voltar';
+import { TouchableOpacity } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,13 +30,12 @@ function App() {
   );
 }
 
-function Index() {
+function Index({ navigation }) {
   return (
-    <View style={styles.index} >
-      <Image 
-        source={require('./assets/logo.jpg')}
-        style={styles.logo}
-      />
+    <View style={styles.index}>
+      <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+        <Image source={require('./assets/logo.jpg')} style={styles.logo}/>
+      </TouchableOpacity>
     </View>
   );
 }
