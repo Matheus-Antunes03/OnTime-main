@@ -16,7 +16,7 @@ export function Cadastro_Cliente({ navigation }) {
         <Text style={styles.label}>Telefone</Text>
         <TextInput style={styles.input} keyboardType="phone-pad" />
         <Text style={styles.label}>Email</Text>
-        <TextInput style={styles.input} keyboardType="email-address" />
+        <TextInput style={styles.input} keyboardType="email-address"/>
         <Text style={styles.label}>Estado</Text>
         <TextInput style={styles.input} />
         <Text style={styles.label}>Cidade</Text>
