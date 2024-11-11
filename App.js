@@ -7,9 +7,11 @@ import { Rodape } from './src/components/Rodape';
 import { Cabecalho_Pesquisa } from './src/components/Cabecalho_Pesquisa';
 import { Carrinho } from './src/components/Carrinho/Carrinho';
 import { Card } from './src/components/Card/Card';
+//import { Cadastro_Cliente } from './src/components/Cadastro_Cliente';
 import { Cabecalho } from './src/components/Cabecalho';
 import { Cabecalho_Voltar } from './src/components/Cabecalho_Voltar';
 import { TouchableOpacity } from 'react-native';
+import { Menu_Cadastro_Conteudo } from './src/components/Menu_Cadastro_Conteudo';
 
 const Stack = createNativeStackNavigator();
 
@@ -18,13 +20,16 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Index">
         <Stack.Screen name="Index" component={Index} options={{ headerShown: false }} />
+        <Stack.Screen name="Menu_Cadastro" component={Menu_Cadastros} options={{ headerShown: false }} />
+        <Stack.Screen name="Cadastro_Cliente" component={Cadastro_Clientes} options={{ headerShown: false }} />
+        <Stack.Screen name="Cadastro_Estabelecimento" component={Cadastro_Estabelecimentos} options={{ headerShown: false }} />
         <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
         <Stack.Screen name="Mapa" component={Mapa} options={{ headerShown: false }} />
         <Stack.Screen name="Pesquisa" component={Pesquisa} options={{ headerShown: false }} />
         <Stack.Screen name="Usuario" component={Usuario} options={{ headerShown: false }} />
         <Stack.Screen name="Produto" component={Produto} options={{ headerShown: false }} />
+        <Stack.Screen name="Estabelecimento" component={Estabelecimento} options={{ headerShown: false }} />
         <Stack.Screen name="Carrinhos" component={Carrinhos} options={{ headerShown: false }} />
-        <Stack.Screen name="Cadastro_Cliente" component={Cadastro_Cliente} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -33,13 +38,45 @@ function App() {
 function Index({ navigation }) {
   return (
     <View style={styles.index}>
-      <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+      <TouchableOpacity onPress={() => navigation.navigate('Menu_Cadastro')}>
         <Image source={require('./assets/logo.jpg')} style={styles.logo}/>
       </TouchableOpacity>
     </View>
   );
 }
 
+function Menu_Cadastros({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+      <Cabecalho_Voltar navigation={navigation}/>
+      </View>
+      <Menu_Cadastro_Conteudo navigation={navigation}/>
+    </View>
+  )
+}
+
+function Cadastro_Clientes({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Cabecalho_Voltar navigation={navigation}/>
+      </View>
+      <View style={styles.content} />
+    </View>
+  );
+}
+
+function Cadastro_Estabelecimentos({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Cabecalho_Voltar navigation={navigation}/>
+      </View>
+      <View style={styles.content} />
+    </View>
+  );
+}
 
 function Home({ navigation }) {
   return (
@@ -51,7 +88,7 @@ function Home({ navigation }) {
         <Carrinho navigation={navigation}/>
       </View>
       <View style={styles.cards}>
-        <Card style={styles.card} />
+        <Card navigation={navigation} style={styles.card} />
       </View>
       <View style={styles.content} />
       <View style={styles.footer}>
@@ -129,6 +166,23 @@ function Produto({ navigation }) {
   );
 }
 
+function Estabelecimento({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Cabecalho_Voltar navigation={navigation}/>
+      </View>
+      <View style={styles.carrinho}>
+        <Carrinho navigation={navigation}/>
+      </View>
+      <View style={styles.content} />
+      <View style={styles.footer}>
+        <Rodape navigation={navigation} />
+      </View>
+    </View>
+  );
+}
+
 function Carrinhos({ navigation }) {
   return (
     <View style={styles.container}>
@@ -143,14 +197,4 @@ function Carrinhos({ navigation }) {
   );
 }
 
-function Cadastro_Cliente({ navigation }) {
-  return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Cabecalho_Voltar navigation={navigation}/>
-      </View>
-      <View style={styles.content} />
-    </View>
-  );
-}
 export default App;
