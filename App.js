@@ -7,11 +7,12 @@ import { Rodape } from './src/components/Rodape';
 import { Cabecalho_Pesquisa } from './src/components/Cabecalho_Pesquisa';
 import { Carrinho } from './src/components/Carrinho/Carrinho';
 import { Card } from './src/components/Card/Card';
-//import { Cadastro_Cliente } from './src/components/Cadastro_Cliente';
+import { Cadastro_Cliente } from './src/components/Cadastro_Cliente';
 import { Cabecalho } from './src/components/Cabecalho';
 import { Cabecalho_Voltar } from './src/components/Cabecalho_Voltar';
 import { TouchableOpacity } from 'react-native';
 import { Menu_Cadastro_Conteudo } from './src/components/Menu_Cadastro_Conteudo';
+import { Cadastro_Estabelecimento } from './src/components/Cadastro_Estabelecimento';
 
 const Stack = createNativeStackNavigator();
 
@@ -62,7 +63,7 @@ function Cadastro_Clientes({ navigation }) {
       <View style={styles.header}>
         <Cabecalho_Voltar navigation={navigation}/>
       </View>
-      <View style={styles.content} />
+      <Cadastro_Cliente navigation={navigation}/>
     </View>
   );
 }
@@ -73,7 +74,7 @@ function Cadastro_Estabelecimentos({ navigation }) {
       <View style={styles.header}>
         <Cabecalho_Voltar navigation={navigation}/>
       </View>
-      <View style={styles.content} />
+      <Cadastro_Estabelecimento navigation={navigation}/>
     </View>
   );
 }
