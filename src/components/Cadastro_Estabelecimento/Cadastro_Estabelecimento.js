@@ -11,22 +11,14 @@ export function Cadastro_Estabelecimento() {
       <View style={styles.content}>
         <Text style={styles.label}>Nome do estabelecimento</Text>
         <TextInput style={styles.input} />
-        <Text style={styles.label}>CNPJ</Text>
-        <TextInput style={styles.input} keyboardType="numeric" />
-        <Text style={styles.label}>Telefone</Text>
-        <TextInput style={styles.input} keyboardType="phone-pad" />
-        <Text style={styles.label}>Email</Text>
-        <TextInput style={styles.input} keyboardType="email-address" />
-        <Text style={styles.label}>CEP</Text>
-        <TextInput style={styles.input} />
-        <Text style={styles.label}>Estado</Text>
-        <TextInput style={styles.input} />
-        <Text style={styles.label}>Cidade</Text>
-        <TextInput style={styles.input} />
         <Text style={styles.label}>Endereço</Text>
-        <TextInput style={styles.input} />
+        <TextInput style={styles.input} keyboardType="numeric" />
+        <Text style={styles.label}>Inscrição Municipal</Text>
+        <TextInput style={styles.input} keyboardType="phone-pad" />
+        <Text style={styles.label}>CNPJ</Text>
+        <TextInput style={styles.input} keyboardType="email-address" />
       </View>
-      <TouchableOpacity style={styles.cadastrar}>Cadastrar</TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Index')} style={styles.cadastrar}>Cadastrar</TouchableOpacity>
     </View>
   );
 }

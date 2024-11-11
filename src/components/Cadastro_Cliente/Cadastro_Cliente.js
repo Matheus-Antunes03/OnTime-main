@@ -11,18 +11,13 @@ export function Cadastro_Cliente({ navigation }) {
       <View style={styles.content}>
         <Text style={styles.label}>Nome Completo</Text>
         <TextInput style={styles.input} />
-        <Text style={styles.label}>CPF</Text>
+        <Text style={styles.label}>Data de Nascimento</Text>
         <TextInput style={styles.input} keyboardType="numeric" />
         <Text style={styles.label}>Telefone</Text>
         <TextInput style={styles.input} keyboardType="phone-pad" />
-        <Text style={styles.label}>Email</Text>
-        <TextInput style={styles.input} keyboardType="email-address"/>
-        <Text style={styles.label}>Estado</Text>
-        <TextInput style={styles.input} />
-        <Text style={styles.label}>Cidade</Text>
-        <TextInput style={styles.input} />
+        <Text style={styles.label}>CPF</Text>
       </View>
-      <TouchableOpacity style={styles.cadastrar} onPress={() => navigation.navigate('Home')}>Cadastrar</TouchableOpacity>
+      <TouchableOpacity style={styles.cadastrar} onPress={() => navigation.navigate('Index')}>Cadastrar</TouchableOpacity>
     </View>
   );
 }

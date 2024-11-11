@@ -13,6 +13,7 @@ import { Cabecalho_Voltar } from './src/components/Cabecalho_Voltar';
 import { TouchableOpacity } from 'react-native';
 import { Menu_Cadastro_Conteudo } from './src/components/Menu_Cadastro_Conteudo';
 import { Cadastro_Estabelecimento } from './src/components/Cadastro_Estabelecimento';
+import { IndexTela } from './src/components/Index/IndexTela';
 
 const Stack = createNativeStackNavigator();
 
@@ -38,10 +39,8 @@ function App() {
 
 function Index({ navigation }) {
   return (
-    <View style={styles.index}>
-      <TouchableOpacity onPress={() => navigation.navigate('Menu_Cadastro')}>
-        <Image source={require('./assets/logo.jpg')} style={styles.logo}/>
-      </TouchableOpacity>
+    <View style={styles.container}>
+      <IndexTela navigation={navigation}/>
     </View>
   );
 }
