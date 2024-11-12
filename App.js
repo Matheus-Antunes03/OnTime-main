@@ -14,6 +14,7 @@ import { TouchableOpacity } from 'react-native';
 import { Menu_Cadastro_Conteudo } from './src/components/Menu_Cadastro_Conteudo';
 import { Cadastro_Estabelecimento } from './src/components/Cadastro_Estabelecimento';
 import { IndexTela } from './src/components/Index/IndexTela';
+import { Usuario } from './src/components/Usuario';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,7 +29,7 @@ function App() {
         <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
         <Stack.Screen name="Mapa" component={Mapa} options={{ headerShown: false }} />
         <Stack.Screen name="Pesquisa" component={Pesquisa} options={{ headerShown: false }} />
-        <Stack.Screen name="Usuario" component={Usuario} options={{ headerShown: false }} />
+        <Stack.Screen name="Usuario" component={Usuarios} options={{ headerShown: false }} />
         <Stack.Screen name="Produto" component={Produto} options={{ headerShown: false }} />
         <Stack.Screen name="Estabelecimento" component={Estabelecimento} options={{ headerShown: false }} />
         <Stack.Screen name="Carrinhos" component={Carrinhos} options={{ headerShown: false }} />
@@ -85,7 +86,7 @@ function Home({ navigation }) {
         <Cabecalho/>
       </View>
       <View style={styles.carrinho}>
-        <Carrinho navigation={navigation}/>
+        <Carrinho style={styles.carrinhoicone} navigation={navigation}/>
       </View>
       <View style={styles.cards}>
         <Card navigation={navigation} style={styles.card} />
@@ -105,7 +106,7 @@ function Mapa({ navigation }) {
         <Cabecalho/>
       </View>
       <View style={styles.carrinho}>
-        <Carrinho navigation={navigation}/>
+        <Carrinho style={styles.carrinhoicone} navigation={navigation}/>
       </View>
       <View style={styles.content} />
       <View style={styles.footer}>
@@ -122,7 +123,7 @@ function Pesquisa({ navigation }) {
         <Cabecalho_Pesquisa />
       </View>
       <View style={styles.carrinho}>
-        <Carrinho navigation={navigation}/>
+        <Carrinho style={styles.carrinhoicone} navigation={navigation}/>
       </View>
       <View style={styles.content} />
       <View style={styles.footer}>
@@ -132,15 +133,14 @@ function Pesquisa({ navigation }) {
   );
 }
 
-function Usuario({ navigation }) {
+function Usuarios({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Cabecalho/>
       </View>
-      <View style={styles.carrinho}>
-        <Carrinho navigation={navigation}/>
-      </View>
+      <Carrinho style={styles.carrinho} navigation={navigation}/>
+      <Usuario style={styles.usuario}/>
       <View style={styles.content} />
       <View style={styles.footer}>
         <Rodape navigation={navigation} />
@@ -156,7 +156,7 @@ function Produto({ navigation }) {
         <Cabecalho_Voltar navigation={navigation}/>
       </View>
       <View style={styles.carrinho}>
-        <Carrinho navigation={navigation}/>
+        <Carrinho style={styles.carrinhoicone} navigation={navigation}/>
       </View>
       <View style={styles.content} />
       <View style={styles.footer}>
@@ -173,7 +173,7 @@ function Estabelecimento({ navigation }) {
         <Cabecalho_Voltar navigation={navigation}/>
       </View>
       <View style={styles.carrinho}>
-        <Carrinho navigation={navigation}/>
+        <Carrinho style={styles.carrinhoicone} navigation={navigation}/>
       </View>
       <View style={styles.content} />
       <View style={styles.footer}>

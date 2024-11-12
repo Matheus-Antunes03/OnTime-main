@@ -16,6 +16,7 @@ export function Cadastro_Cliente({ navigation }) {
         <Text style={styles.label}>Telefone</Text>
         <TextInput style={styles.input} keyboardType="phone-pad" />
         <Text style={styles.label}>CPF</Text>
+        <TextInput style={styles.input} keyboardType="numeric" />
       </View>
       <TouchableOpacity style={styles.cadastrar} onPress={() => navigation.navigate('Index')}>Cadastrar</TouchableOpacity>
     </View>

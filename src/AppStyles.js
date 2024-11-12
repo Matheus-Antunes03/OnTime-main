@@ -30,8 +30,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   carrinho: {
+    position: 'absolute',
     flexDirection: 'row',
     justifyContent: 'flex-end',
+  },
+  usuario: {
+    position: 'relative',
   },
   cards: {
     alignItems: "center",
