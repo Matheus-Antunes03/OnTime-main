@@ -33,6 +33,9 @@ function App() {
         <Stack.Screen name="Produto" component={Produto} options={{ headerShown: false }} />
         <Stack.Screen name="Estabelecimento" component={Estabelecimento} options={{ headerShown: false }} />
         <Stack.Screen name="Carrinhos" component={Carrinhos} options={{ headerShown: false }} />
+        <Stack.Screen name="Meus_Pedidos" component={Meus_Pedidos} options={{ headerShown: false }} />
+        <Stack.Screen name="Meus_Dados" component={Meus_Dados} options={{ headerShown: false }} />
+        <Stack.Screen name="Sobre" component={Sobre} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -95,6 +98,7 @@ function Home({ navigation }) {
       <View style={styles.footer}>
         <Rodape navigation={navigation} />
       </View>
+      <View style={styles.selecionadoHome}/>
     </View>
   );
 }
@@ -105,13 +109,14 @@ function Mapa({ navigation }) {
       <View style={styles.header}>
         <Cabecalho/>
       </View>
+      <View style={styles.content} />
       <View style={styles.carrinho}>
         <Carrinho style={styles.carrinhoicone} navigation={navigation}/>
       </View>
-      <View style={styles.content} />
       <View style={styles.footer}>
         <Rodape navigation={navigation} />
       </View>
+      <View style={styles.selecionadoMapa}/>
     </View>
   );
 }
@@ -122,13 +127,14 @@ function Pesquisa({ navigation }) {
       <View style={styles.header}>
         <Cabecalho_Pesquisa />
       </View>
+      <View style={styles.content} />
       <View style={styles.carrinho}>
         <Carrinho style={styles.carrinhoicone} navigation={navigation}/>
       </View>
-      <View style={styles.content} />
       <View style={styles.footer}>
         <Rodape navigation={navigation} />
       </View>
+      <View style={styles.selecionadoPesquisa}/>
     </View>
   );
 }
@@ -136,17 +142,20 @@ function Pesquisa({ navigation }) {
 function Usuarios({ navigation }) {
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Cabecalho/>
+      <View style={styles.usuario}>
+        <Usuario navigation={navigation} />
       </View>
       <View style={styles.carrinho}>
         <Carrinho style={styles.carrinhoicone} navigation={navigation}/>
       </View>
-      <Usuario style={styles.usuario}/>
-      <View style={styles.content} />
+      <View style={styles.headerUsuario}>
+        <Cabecalho/>
+      </View>
+      <View style={styles.contentUsuario} />
       <View style={styles.footer}>
         <Rodape navigation={navigation} />
       </View>
+      <View style={styles.selecionadoUsuario}/>
     </View>
   );
 }
@@ -186,6 +195,54 @@ function Estabelecimento({ navigation }) {
 }
 
 function Carrinhos({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Cabecalho_Voltar navigation={navigation}/>
+      </View>
+      <View style={styles.content} />
+      <View style={styles.footer}>
+        <Rodape navigation={navigation} />
+      </View>
+    </View>
+  );
+}
+
+function Meus_Pedidos({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Cabecalho_Voltar navigation={navigation}/>
+      </View>
+      <View style={styles.carrinho}>
+        <Carrinho style={styles.carrinhoicone} navigation={navigation}/>
+      </View>
+      <View style={styles.content} />
+      <View style={styles.footer}>
+        <Rodape navigation={navigation} />
+      </View>
+    </View>
+  );
+}
+
+function Meus_Dados({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Cabecalho_Voltar navigation={navigation}/>
+      </View>
+      <View style={styles.carrinho}>
+        <Carrinho style={styles.carrinhoicone} navigation={navigation}/>
+      </View>
+      <View style={styles.content} />
+      <View style={styles.footer}>
+        <Rodape navigation={navigation} />
+      </View>
+    </View>
+  );
+}
+
+function Sobre({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>

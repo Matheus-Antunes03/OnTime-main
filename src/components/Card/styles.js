@@ -8,6 +8,9 @@ const styles = StyleSheet.create({
       borderRadius: 30,
       flexDirection: 'row',
     },
+    content: {
+      flexDirection: "column"
+    },
     foto: {
       width: 160,
       height: 180,
@@ -17,6 +20,14 @@ const styles = StyleSheet.create({
       color: "#ffffff",
       fontSize: 18,
       padding: 20
+    },
+    lista: {
+      flexDirection: "column",
+    },
+    item: {
+      color: "#ffffff",
+      fontSize: 15,
+      marginLeft: 20
     }
   });
   
