@@ -15,6 +15,7 @@ import { Menu_Cadastro_Conteudo } from './src/components/Menu_Cadastro_Conteudo'
 import { Cadastro_Estabelecimento } from './src/components/Cadastro_Estabelecimento';
 import { IndexTela } from './src/components/Index/IndexTela';
 import { Usuario } from './src/components/Usuario';
+import { Estabelecimento } from './src/components/Estabelecimento';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,7 +32,7 @@ function App() {
         <Stack.Screen name="Pesquisa" component={Pesquisa} options={{ headerShown: false }} />
         <Stack.Screen name="Usuario" component={Usuarios} options={{ headerShown: false }} />
         <Stack.Screen name="Produto" component={Produto} options={{ headerShown: false }} />
-        <Stack.Screen name="Estabelecimento" component={Estabelecimento} options={{ headerShown: false }} />
+        <Stack.Screen name="Estabelecimento" component={Estabelecimentos} options={{ headerShown: false }} />
         <Stack.Screen name="Carrinhos" component={Carrinhos} options={{ headerShown: false }} />
         <Stack.Screen name="Meus_Pedidos" component={Meus_Pedidos} options={{ headerShown: false }} />
         <Stack.Screen name="Meus_Dados" component={Meus_Dados} options={{ headerShown: false }} />
@@ -177,11 +178,14 @@ function Produto({ navigation }) {
   );
 }
 
-function Estabelecimento({ navigation }) {
+function Estabelecimentos({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Cabecalho_Voltar navigation={navigation}/>
+      </View>
+      <View>
+        <Estabelecimento/>
       </View>
       <View style={styles.carrinho}>
         <Carrinho style={styles.carrinhoicone} navigation={navigation}/>
