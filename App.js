@@ -19,6 +19,7 @@ import { Estabelecimento } from './src/components/Estabelecimento';
 import { Card_Carrinho } from './src/components/Card_Carrinho';
 import { Produto } from './src/components/Produto';
 import { Carrinho_Total } from './src/components/Carrinho_Total';
+import { Cadastro_Produto } from './src/components/Cadastro_Produto';
 
 const Stack = createNativeStackNavigator();
 
@@ -40,6 +41,7 @@ function App() {
         <Stack.Screen name="Meus_Pedidos" component={Meus_Pedidos} options={{ headerShown: false }} />
         <Stack.Screen name="Meus_Dados" component={Meus_Dados} options={{ headerShown: false }} />
         <Stack.Screen name="Sobre" component={Sobre} options={{ headerShown: false }} />
+        <Stack.Screen name="Cadastro_Produto" component={Cadastro_Produtos} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -82,6 +84,17 @@ function Cadastro_Estabelecimentos({ navigation }) {
         <Cabecalho_Voltar navigation={navigation}/>
       </View>
       <Cadastro_Estabelecimento navigation={navigation}/>
+    </View>
+  );
+}
+
+function Cadastro_Produtos({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Cabecalho_Voltar navigation={navigation}/>
+      </View>
+      <Cadastro_Produto navigation={navigation}/>
     </View>
   );
 }

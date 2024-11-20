@@ -18,7 +18,7 @@ export function Estabelecimento({ navigation }) {
       </View>
       <Text style={styles.nome}>SuperMercado Centro</Text>
       <View style={styles.divisoria}></View>
-      <TouchableOpacity style={styles.opcoes} onPress={() => navigation.navigate('Meus_Pedidos')}>
+      <TouchableOpacity style={styles.opcoes} onPress={() => navigation.navigate('Cadastro_Produto')}>
         <Image source={require('../../../assets/produtos.png')} style={styles.icone} />
         <Text style={styles.opcao}>Produtos</Text>
       </TouchableOpacity>
