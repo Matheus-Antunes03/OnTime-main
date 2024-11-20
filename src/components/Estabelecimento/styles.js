@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
       },
       nome: {
         color: "#ffffff",
-        fontSize: 50,
+        fontSize: 40,
         letterSpacing: 3,
         fontWeight: 600,
         textAlign: "center"

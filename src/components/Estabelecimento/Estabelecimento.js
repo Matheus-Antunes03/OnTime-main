@@ -8,7 +8,7 @@ export function Estabelecimento({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
-        <Image source={require('../../../assets/fotoPerfil.jpg')} style={styles.foto} />
+        <Image source={require('../../../assets/supermercado_centro.jpg')} style={styles.foto} />
         
         {/* Gradiente esfumaçado entre a imagem e a cor #ff4400 */}
         <LinearGradient
@@ -16,15 +16,20 @@ export function Estabelecimento({ navigation }) {
           style={styles.gradient}
         />
       </View>
-      <Text style={styles.nome}>Marília</Text>
+      <Text style={styles.nome}>SuperMercado Centro</Text>
       <View style={styles.divisoria}></View>
       <TouchableOpacity style={styles.opcoes} onPress={() => navigation.navigate('Meus_Pedidos')}>
-        <Image source={require('../../../assets/cesta.png')} style={styles.icone} />
-        <Text style={styles.opcao}>Meus Pedidos</Text>
+        <Image source={require('../../../assets/produtos.png')} style={styles.icone} />
+        <Text style={styles.opcao}>Produtos</Text>
       </TouchableOpacity>
       <View style={styles.divisoria2}></View>
       <TouchableOpacity style={styles.opcoes} onPress={() => navigation.navigate('Meus_Dados')}>
-        <Image source={require('../../../assets/usuario.png')} style={styles.icone} />
+        <Image source={require('../../../assets/cesta.png')} style={styles.icone} />
+        <Text style={styles.opcao}>Pedidos</Text>
+      </TouchableOpacity>
+      <View style={styles.divisoria2}></View>
+      <TouchableOpacity style={styles.opcoes} onPress={() => navigation.navigate('Sobre')}>
+        <Image source={require('../../../assets/estabelecimento.png')} style={styles.icone} />
         <Text style={styles.opcao}>Meus Dados</Text>
       </TouchableOpacity>
       <View style={styles.divisoria2}></View>
@@ -36,4 +41,4 @@ export function Estabelecimento({ navigation }) {
   );
 }
 
-export default Usuario;
+export default Estabelecimento;

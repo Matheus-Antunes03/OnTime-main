@@ -99,6 +99,31 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 115
   },
+  gradient2: {
+    position: 'absolute',
+    bottom: 0, // O gradiente começa da parte inferior da imagem
+    left: 0,
+    top: 800,
+    right: 0,
+    height: 100, // Defina a altura do gradiente
+  },
+  meu_carrinho: {
+    color: "#ff4400",
+    fontSize: 40,
+    fontWeight: 600,
+    textAlign: "center"
+  },
+  divisoria: {
+    backgroundColor: "#ff4400",
+    width: "95%",
+    height: 7,
+    borderRadius: 20,
+    marginLeft: 10
+  },
+  card_carrinho: {
+    alignItems: "center",
+    marginTop: 20
+  },
 });
 
 export default styles;
