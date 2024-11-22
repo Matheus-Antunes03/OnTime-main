@@ -106,6 +106,19 @@ const styles = StyleSheet.create({
     justifyContent: 'center', 
     alignItems: 'center',
   },
+  adicionar: {
+    width: 70,
+    height: 70,
+    backgroundColor: "#ff4400",
+    textAlign: "center",
+    alignSelf: "center",
+    color: "#ffffff",
+    fontSize: 60,
+    borderRadius: 100,
+    padding: 1,
+    marginBottom: 10,
+    fontWeight: 1200
+  },
   contentUsuario: {
     flex: 1,
     justifyContent: 'center', 

@@ -3,7 +3,7 @@ import styles from './src/AppStyles';
 import { LinearGradient } from 'expo-linear-gradient';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { View, ImageBackground, Text } from 'react-native';
+import { View, ImageBackground, Text, TouchableOpacity } from 'react-native';
 import { Rodape } from './src/components/Rodape';
 import { Cabecalho_Pesquisa } from './src/components/Cabecalho_Pesquisa';
 import { Carrinho } from './src/components/Carrinho/Carrinho';
@@ -343,6 +343,7 @@ function Produtos_Estabelecimento({ navigation }) {
         <Card_Pedidos/>
       </View>
       <View style={styles.content} />
+      <TouchableOpacity style={styles.adicionar}>+</TouchableOpacity>
       <View style={styles.footer}>
         <Rodape navigation={navigation} />
       </View>
