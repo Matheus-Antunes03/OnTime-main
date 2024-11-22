@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
       backgroundColor: "#ff4400",
       borderRadius: 30,
       flexDirection: 'row',
-      paddingTop: 20
+      paddingTop: 10
     },
     content: {
       flexDirection: "column"
@@ -20,26 +20,27 @@ const styles = StyleSheet.create({
     foto: {
       width: 160,
       height: 70,
-      marginTop: 35
+      marginTop: 40
     },
-    nome: {
+    pedido: {
       color: "#ffffff",
-      fontSize: 18,
+      fontSize: 30,
+      fontWeight: 600
     },
-    nomeMercado: {
+    infos: {
         color: "#ffffff",
-        fontSize: 13,
+        fontSize: 20,
     },
     preco: {
         backgroundColor: "#ffffff",
         borderTopLeftRadius: 30,
         borderBottomLeftRadius: 30,
-        width: 182,
-        height: 65,
-        paddingTop: 10,
+        width: 181,
+        height: 50,
+        paddingTop: 20,
         paddingBottom: 10,
-        paddingLeft: 10,
-        marginTop: 10
+        paddingLeft: 20,
+        marginTop: 5
     },
     lado:{
         flexDirection: "row"
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
     },
     valor: {
         color: "#ff4400",
-        fontSize: 20,
+        fontSize: 25,
         fontWeight: 600,
         marginTop: -15
     },

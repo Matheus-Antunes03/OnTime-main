@@ -3,7 +3,7 @@ import styles from './src/AppStyles';
 import { LinearGradient } from 'expo-linear-gradient';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { View, Image, Text } from 'react-native';
+import { View, ImageBackground, Text } from 'react-native';
 import { Rodape } from './src/components/Rodape';
 import { Cabecalho_Pesquisa } from './src/components/Cabecalho_Pesquisa';
 import { Carrinho } from './src/components/Carrinho/Carrinho';
@@ -20,6 +20,10 @@ import { Card_Carrinho } from './src/components/Card_Carrinho';
 import { Produto } from './src/components/Produto';
 import { Carrinho_Total } from './src/components/Carrinho_Total';
 import { Cadastro_Produto } from './src/components/Cadastro_Produto';
+import { Card_Mapa } from './src/components/Card_Mapa/Card_Mapa';
+import { Card_Produto } from './src/components/Card_Produto';
+import { Card_Pedido } from './src/components/Card_Pedido';
+import { Meus_Dados } from './src/components/Meus_Dados';
 
 const Stack = createNativeStackNavigator();
 
@@ -39,7 +43,7 @@ function App() {
         <Stack.Screen name="Estabelecimento" component={Estabelecimentos} options={{ headerShown: false }} />
         <Stack.Screen name="Carrinhos" component={Carrinhos} options={{ headerShown: false }} />
         <Stack.Screen name="Meus_Pedidos" component={Meus_Pedidos} options={{ headerShown: false }} />
-        <Stack.Screen name="Meus_Dados" component={Meus_Dados} options={{ headerShown: false }} />
+        <Stack.Screen name="Meus_Dados" component={Meus_Dados_Pagina} options={{ headerShown: false }} />
         <Stack.Screen name="Sobre" component={Sobre} options={{ headerShown: false }} />
         <Stack.Screen name="Cadastro_Produto" component={Cadastro_Produtos} options={{ headerShown: false }} />
       </Stack.Navigator>
@@ -123,8 +127,12 @@ function Home({ navigation }) {
 function Mapa({ navigation }) {
   return (
     <View style={styles.container}>
+      <ImageBackground source={require('./assets//mapa.png')}style={styles.mapaimg}></ImageBackground>
       <View style={styles.header}>
         <Cabecalho/>
+      </View>
+      <View>
+        <Card_Mapa navigation={navigation}/>
       </View>
       <View style={styles.content} />
       <View style={styles.carrinho}>
@@ -143,6 +151,16 @@ function Pesquisa({ navigation }) {
     <View style={styles.container}>
       <View style={styles.header}>
         <Cabecalho_Pesquisa />
+      </View>
+      <Text style={styles.est_prod}>Estabelecimentos</Text>
+      <View style={styles.divisoria2}/>
+      <View style={styles.cards2}>
+        <Card navigation={navigation}/>
+      </View>
+      <Text style={styles.est_prod}>Produtos</Text>
+      <View style={styles.divisoria3}/>
+      <View style={styles.cards2}>
+        <Card_Produto navigation={navigation}/>
       </View>
       <View style={styles.content} />
       <View style={styles.carrinho}>
@@ -243,11 +261,16 @@ function Carrinhos({ navigation }) {
 function Meus_Pedidos({ navigation }) {
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Cabecalho_Voltar navigation={navigation}/>
+      <Text style={styles.meusPedidos}>Meus Pedidos</Text>
+      <View style={styles.divisoria2}/>
+      <View style={styles.cards2}>
+        <Card_Pedido/>
       </View>
       <View style={styles.carrinho}>
         <Carrinho style={styles.carrinhoicone} navigation={navigation}/>
+      </View>
+      <View style={styles.header}>
+        <Cabecalho_Voltar navigation={navigation}/>
       </View>
       <View style={styles.content} />
       <View style={styles.footer}>
@@ -257,19 +280,26 @@ function Meus_Pedidos({ navigation }) {
   );
 }
 
-function Meus_Dados({ navigation }) {
+function Meus_Dados_Pagina({ navigation }) {
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Cabecalho_Voltar navigation={navigation}/>
+      <View style={styles.usuario}>
+        <Meus_Dados/>
       </View>
       <View style={styles.carrinho}>
         <Carrinho style={styles.carrinhoicone} navigation={navigation}/>
       </View>
+      <View style={styles.headerUsuario}>
+        <Cabecalho/>
+      </View>
       <View style={styles.content} />
+      <LinearGradient
+          colors={['transparent', '#000000']} // A cor vai transitar de transparente para laranja
+          style={styles.gradient2}/>
       <View style={styles.footer}>
         <Rodape navigation={navigation} />
       </View>
+      <View style={styles.selecionadoUsuario}/>
     </View>
   );
 }
