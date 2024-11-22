@@ -112,6 +112,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: "#ff4400",
   },
+  contentEstabelecimento: {
+    flex: 1,
+    justifyContent: 'center', 
+    alignItems: 'center',
+    backgroundColor: "#ff4400",
+    position: "relative"
+  },
   carrinho: {
     position: 'absolute',
     marginLeft: 325,
@@ -119,7 +126,6 @@ const styles = StyleSheet.create({
   },
   usuario: {
     position: 'relative',
-    
   },
   cards: {
     alignItems: "center",
@@ -159,6 +165,20 @@ const styles = StyleSheet.create({
     fontSize: 35,
     fontWeight: 600,
     marginLeft: 20,
+    marginTop: 35
+  },
+  pedidos: {
+    color: "#ff4400",
+    fontSize: 35,
+    fontWeight: 600,
+    alignSelf: "center",
+    marginTop: 35
+  },
+  produtos: {
+    color: "#ff4400",
+    fontSize: 35,
+    fontWeight: 600,
+    alignSelf: "center",
     marginTop: 35
   },
 });

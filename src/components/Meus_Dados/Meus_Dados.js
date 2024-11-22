@@ -16,7 +16,7 @@ export function Meus_Dados() {
         <Text style={styles.titulo}>Data de Nascimento</Text>
         <Text style={styles.item}>13/12/1999</Text>
         <Text style={styles.titulo}>E-mail</Text>
-        <Text style={styles.item}>marilia.ss@gmail</Text>
+        <Text style={styles.item}>marilia.ss@gmail.com</Text>
         <Text style={styles.titulo}>Telefone</Text>
         <Text style={styles.item}>(47) 98855-4377</Text>
         <Text style={styles.titulo}>CPF</Text>

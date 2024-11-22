@@ -18,17 +18,17 @@ export function Estabelecimento({ navigation }) {
       </View>
       <Text style={styles.nome}>SuperMercado Centro</Text>
       <View style={styles.divisoria}></View>
-      <TouchableOpacity style={styles.opcoes} onPress={() => navigation.navigate('Cadastro_Produto')}>
+      <TouchableOpacity style={styles.opcoes} onPress={() => navigation.navigate('Produtos_Estabelecimento')}>
         <Image source={require('../../../assets/produtos.png')} style={styles.icone} />
         <Text style={styles.opcao}>Produtos</Text>
       </TouchableOpacity>
       <View style={styles.divisoria2}></View>
-      <TouchableOpacity style={styles.opcoes} onPress={() => navigation.navigate('Meus_Dados')}>
+      <TouchableOpacity style={styles.opcoes} onPress={() => navigation.navigate('Pedidos_Estabelecimento')}>
         <Image source={require('../../../assets/cesta.png')} style={styles.icone} />
         <Text style={styles.opcao}>Pedidos</Text>
       </TouchableOpacity>
       <View style={styles.divisoria2}></View>
-      <TouchableOpacity style={styles.opcoes} onPress={() => navigation.navigate('Sobre')}>
+      <TouchableOpacity style={styles.opcoes} onPress={() => navigation.navigate('Meus_Dados_Estabelecimento')}>
         <Image source={require('../../../assets/estabelecimento.png')} style={styles.icone} />
         <Text style={styles.opcao}>Meus Dados</Text>
       </TouchableOpacity>

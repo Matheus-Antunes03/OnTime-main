@@ -1,0 +1,1 @@
+export * from "./Meus_Dados_Estabelecimento"
