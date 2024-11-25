@@ -28,6 +28,9 @@ import { Meus_Dados_Estabelecimento } from './src/components/Meus_Dados_Estabele
 import { Card_Pedidos } from './src/components/Card_Produtos';
 import { Card_Pedido_Estabelecimento } from './src/components/Card_Pedido_Estabelecimento';
 import { Estabelecimento_Pagina } from './src/components/Estabelecimento_Pagina';
+import { Menu_Login } from './src/components/Menu_Login';
+import { Login_Usuario } from './src/components/Login_Usuario';
+import { Login_Estabelecimento } from './src/components/Login_Estabelecimento';
 
 const Stack = createNativeStackNavigator();
 
@@ -40,6 +43,9 @@ function App() {
         <Stack.Screen name="Cadastro_Cliente" component={Cadastro_Clientes} options={{ headerShown: false }} />
         <Stack.Screen name="Cadastro_Estabelecimento" component={Cadastro_Estabelecimentos} options={{ headerShown: false }} />
         <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
+        <Stack.Screen name="Menu_Login" component={Menu_Login_Tela} options={{ headerShown: false }} />
+        <Stack.Screen name="Login_Usuario" component={Login_Usuarios} options={{ headerShown: false }} />
+        <Stack.Screen name="Login_Estabelecimento" component={Login_Estabelecimentos} options={{ headerShown: false }} />
         <Stack.Screen name="Mapa" component={Mapa} options={{ headerShown: false }} />
         <Stack.Screen name="Pesquisa" component={Pesquisa} options={{ headerShown: false }} />
         <Stack.Screen name="Usuario" component={Usuarios} options={{ headerShown: false }} />
@@ -63,6 +69,39 @@ function Index({ navigation }) {
   return (
     <View style={styles.container}>
       <IndexTela navigation={navigation}/>
+    </View>
+  );
+}
+
+function Menu_Login_Tela({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Cabecalho_Voltar navigation={navigation}/>
+      </View>
+      <Menu_Login navigation={navigation}/>
+    </View>
+  )
+}
+
+function Login_Usuarios({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Cabecalho_Voltar navigation={navigation}/>
+      </View>
+      <Login_Usuario navigation={navigation}/>
+    </View>
+  );
+}
+
+function Login_Estabelecimentos({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Cabecalho_Voltar navigation={navigation}/>
+      </View>
+      <Login_Estabelecimento navigation={navigation}/>
     </View>
   );
 }
@@ -343,7 +382,7 @@ function Produtos_Estabelecimento({ navigation }) {
         <Card_Pedidos/>
       </View>
       <View style={styles.content} />
-      <TouchableOpacity style={styles.adicionar}>+</TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Cadastro_Produto')} style={styles.adicionar}>+</TouchableOpacity>
       <View style={styles.footer}>
         <Rodape navigation={navigation} />
       </View>

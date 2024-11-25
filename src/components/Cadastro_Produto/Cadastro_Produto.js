@@ -20,7 +20,7 @@ export function Cadastro_Produto() {
         <Text style={styles.label}>Peso</Text>
         <TextInput style={styles.input} keyboardType="numeric" />
       </View>
-      <TouchableOpacity onPress={() => navigation.navigate('Index')} style={styles.cadastrar}>Cadastrar</TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.goBack()} style={styles.cadastrar}>Cadastrar</TouchableOpacity>
     </View>
   );
 }
