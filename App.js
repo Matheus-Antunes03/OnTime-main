@@ -19,7 +19,7 @@ import { Estabelecimento } from './src/components/Estabelecimento';
 import { Card_Carrinho } from './src/components/Card_Carrinho';
 import { Produto } from './src/components/Produto';
 import { Carrinho_Total } from './src/components/Carrinho_Total';
-import { Cadastro_Produto } from './src/components/Cadastro_Produto'
+import { Cadastro_Produto } from './src/components/Cadastro_Produto';
 import { Card_Mapa } from './src/components/Card_Mapa/Card_Mapa';
 import { Card_Produto } from './src/components/Card_Produto';
 import { Card_Pedido } from './src/components/Card_Pedido';
