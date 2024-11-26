@@ -6,12 +6,12 @@ export function Login_Usuario({ navigation }) {
   return (
     <View style={styles.container}>
       <Image source={require('../../../assets/logo.jpg')} style={styles.logo}/>
-      <Text>Email</Text>
-      <TextInput/>
+      <Text style={styles.nome}>Email</Text>
+      <TextInput style={styles.campo}/>
       
-      <Text>Senha</Text>
-      <TextInput/>
-      <TouchableOpacity onPress={() => navigation.navigate('Home')} >Entrar</TouchableOpacity>
+      <Text style={styles.nome}>Senha</Text>
+      <TextInput style={styles.campo}/>
+      <TouchableOpacity style={styles.entrar} onPress={() => navigation.navigate('Home')} >Entrar</TouchableOpacity>
     </View>
   );
 }

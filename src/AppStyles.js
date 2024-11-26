@@ -25,6 +25,13 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 40,
     overflow: 'hidden',
   },
+  headerLogin: {
+    height: 100,
+    backgroundColor: '#ff4400',
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'hidden',
+  },
   headerUsuario: {
     height: 100,
     width: "100%",

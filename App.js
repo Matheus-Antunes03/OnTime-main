@@ -31,6 +31,7 @@ import { Estabelecimento_Pagina } from './src/components/Estabelecimento_Pagina'
 import { Menu_Login } from './src/components/Menu_Login';
 import { Login_Usuario } from './src/components/Login_Usuario';
 import { Login_Estabelecimento } from './src/components/Login_Estabelecimento';
+import { Cabecalho_So_Voltar } from './src/components/Cabecalho_So_Voltar';
 
 const Stack = createNativeStackNavigator();
 
@@ -87,8 +88,8 @@ function Menu_Login_Tela({ navigation }) {
 function Login_Usuarios({ navigation }) {
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Cabecalho_Voltar navigation={navigation}/>
+      <View style={styles.headerLogin}>
+        <Cabecalho_So_Voltar navigation={navigation}/>
       </View>
       <Login_Usuario navigation={navigation}/>
     </View>
@@ -98,8 +99,8 @@ function Login_Usuarios({ navigation }) {
 function Login_Estabelecimentos({ navigation }) {
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Cabecalho_Voltar navigation={navigation}/>
+      <View style={styles.headerLogin}>
+        <Cabecalho_So_Voltar navigation={navigation}/>
       </View>
       <Login_Estabelecimento navigation={navigation}/>
     </View>

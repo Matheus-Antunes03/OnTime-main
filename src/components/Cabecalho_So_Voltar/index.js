@@ -1,0 +1,1 @@
+export * from "./Cabecalho_So_Voltar";
