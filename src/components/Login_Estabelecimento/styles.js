@@ -12,18 +12,11 @@ const styles = StyleSheet.create({
         height: 170
     },
     nome: {
-        color: "#ff4400",
+        color: "#ffffff",
         fontWeight: 600,
         fontSize: 20,
         marginTop: 20,
-        backgroundColor: "#ffffff",
-        width: 100,
-        height: 30,
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
         textAlign: "center",
-        padding: 2,
-        marginBottom: -2,
     },
     campo: {
         width: 300,

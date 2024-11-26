@@ -9,7 +9,8 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
     },
     content: {
-      flexDirection: "column"
+      flexDirection: "column",
+      padding: 20
     },
     foto: {
       width: 160,
@@ -18,8 +19,8 @@ const styles = StyleSheet.create({
     },
     nome: {
       color: "#ffffff",
-      fontSize: 18,
-      padding: 20
+      fontSize: 25,
+      fontWeight: 600
     },
     lista: {
       flexDirection: "column",

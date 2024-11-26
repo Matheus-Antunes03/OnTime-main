@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
     },
     nome: {
       color: "#ffffff",
-      fontSize: 20,
+      fontSize: 22,
       alignSelf: "center"
     },
     lista: {
@@ -25,16 +25,17 @@ const styles = StyleSheet.create({
     },
     desconto: {
       backgroundColor: "#ffffff",
-      width: 100,
+      width: 130,
       height: 50,
       borderTopLeftRadius: 40,
       borderBottomLeftRadius: 40,
-      paddingLeft: 10,
-      marginTop: 50,
+      paddingLeft: 13,
+      marginTop: 30,
+      marginLeft: 121
     },
     porcento: {
       color: "#ff4400",
-      fontWeight: 400
+      fontWeight: 600
     },
     lado: {
       flexDirection: "row",

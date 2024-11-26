@@ -8,7 +8,8 @@ export function Card({ navigation }) {
       <TouchableOpacity style={styles.container} onPress={() => navigation.navigate('Estabelecimento_Perfil')}>
         <Image source={require('../../../assets/supermercado_centro.jpg')} style={styles.foto} />
         <View style={styles.content}>
-          <Text style={styles.nome}>Supermercado Centro</Text>
+          <Text style={styles.nome}>Supermercado</Text>
+          <Text style={styles.nome}>Centro</Text>
         </View>
       </TouchableOpacity>
     </View>

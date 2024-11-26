@@ -8,12 +8,6 @@ export function Card_Mapa({ navigation }) {
       <TouchableOpacity onPress={() => navigation.navigate('Estabelecimento')} style={styles.container}>
         <Text style={styles.nome}>Supermercado Centro</Text>
         <View style={styles.lado}>
-          <View style={styles.lista}>
-                <Text style={styles.item}>- Padaria</Text>
-                <Text style={styles.item}>- Mercearia</Text>
-                <Text style={styles.item}>- Hortifruti</Text>
-                <Text style={styles.item}>- Outros</Text>
-          </View>
           <View style={styles.desconto}>
             <Text style={styles.porcento}>descontos de</Text>
             <Text style={styles.porcento}>até 60%</Text>
