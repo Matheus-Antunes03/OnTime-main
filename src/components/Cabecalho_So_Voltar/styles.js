@@ -6,6 +6,17 @@ const styles = StyleSheet.create({
     height: 100,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#ff4400'
+  },
+  backButton: {
+    position: 'absolute',
+    left: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  voltar: {
+    width: 50,
+    height: 50,
   },
   logo: {
     width: 140,

@@ -150,11 +150,11 @@ const styles = StyleSheet.create({
   },
   gradient2: {
     position: 'absolute',
-    bottom: 0, // O gradiente começa da parte inferior da imagem
+    bottom: 0,
     left: 0,
     top: 800,
     right: 0,
-    height: 100, // Defina a altura do gradiente
+    height: 100,
   },
   meu_carrinho: {
     color: "#ff4400",
@@ -194,6 +194,13 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     marginTop: 35
   },
+  sobre: {
+    fontSize: 30,
+    color: "#ff4400",
+    fontWeight: 600,
+    padding: 20,
+    textAlign: "justify"
+  }
 });
 
 export default styles;

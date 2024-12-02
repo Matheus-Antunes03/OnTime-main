@@ -5,12 +5,12 @@ const styles = StyleSheet.create({
         flex: 1,
         width: '100%',
         height: '100%',
-        backgroundColor: '#ffffff', // Cor de fundo laranja
+        backgroundColor: '#ffffff',
       },
       imageContainer: {
         position: 'relative',
         width: '100%',
-        height: 300, // Altura da imagem
+        height: 300,
       },
       foto: {
         width: '100%',

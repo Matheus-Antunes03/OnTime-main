@@ -7,10 +7,12 @@ const styles = StyleSheet.create({
       backgroundColor: "#ff4400",
       borderRadius: 30,
       flexDirection: 'row',
-      paddingTop: 20
+      paddingTop: 20,
+      marginTop: 20
     },
     content: {
-      flexDirection: "column"
+      flexDirection: "column",
+      marginLeft: 20
     },
     img_check: {
         flexDirection: "column",
@@ -34,12 +36,11 @@ const styles = StyleSheet.create({
         backgroundColor: "#ffffff",
         borderTopLeftRadius: 30,
         borderBottomLeftRadius: 30,
-        width: 182,
+        width: 150,
         height: 65,
-        paddingTop: 10,
-        paddingBottom: 10,
-        paddingLeft: 10,
-        marginTop: 10
+        padding: 20,
+        marginTop: 10,
+        marginLeft: 190
     },
     lado:{
         flexDirection: "row"
@@ -65,10 +66,24 @@ const styles = StyleSheet.create({
     },
     valor: {
         color: "#ff4400",
-        fontSize: 20,
+        fontSize: 30,
         fontWeight: 600,
         marginTop: -15
     },
+    excluir: {
+      width: 100,
+      height: 50,
+      backgroundColor: "#ffffff",
+      borderRadius: 50,
+      padding: 5,
+      marginLeft: -120
+    },
+    excluirTexto: {
+      color: "#ff4400",
+      alignSelf: "center",
+      fontWeight: 700,
+      fontSize: 20
+    }
   });
   
   export default styles;

@@ -1,22 +1,31 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { View, Image, Text } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient'; // Importando o LinearGradient
+import { LinearGradient } from 'expo-linear-gradient';
 import styles from './styles';
 import { TouchableOpacity } from 'react-native';
+import { UserContext } from '../../context/context';
 
 export function Estabelecimento({ navigation }) {
+  const { estabelecimento } = useContext(UserContext);
+
+  if (!estabelecimento) {
+    return (
+      <View style={styles.container}>
+        <Text>Carregando...</Text>
+      </View>
+    );
+  }
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
         <Image source={require('../../../assets/supermercado_centro.jpg')} style={styles.foto} />
         
-        {/* Gradiente esfumaçado entre a imagem e a cor #ff4400 */}
         <LinearGradient
-          colors={['transparent', '#ff4400']} // A cor vai transitar de transparente para laranja
+          colors={['transparent', '#ff4400']}
           style={styles.gradient}
         />
       </View>
-      <Text style={styles.nome}>SuperMercado Centro</Text>
+      <Text style={styles.nome}>{estabelecimento.nome}</Text>
       <View style={styles.divisoria}></View>
       <TouchableOpacity style={styles.opcoes} onPress={() => navigation.navigate('Produtos_Estabelecimento')}>
         <Image source={require('../../../assets/produtos.png')} style={styles.icone} />

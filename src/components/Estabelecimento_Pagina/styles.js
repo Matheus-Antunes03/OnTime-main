@@ -5,12 +5,12 @@ const styles = StyleSheet.create({
         flex: 1,
         width: '100%',
         height: '100%',
-        backgroundColor: '#ff4400', // Cor de fundo laranja
+        backgroundColor: '#ff4400',
       },
       imageContainer: {
         position: 'relative',
         width: '100%',
-        height: 300, // Altura da imagem
+        height: 300,
       },
       foto: {
         width: '100%',
@@ -19,11 +19,11 @@ const styles = StyleSheet.create({
       },
       gradient: {
         position: 'absolute',
-        bottom: 0, // O gradiente começa da parte inferior da imagem
+        bottom: 0,
         left: 0,
         top: 270,
         right: 0,
-        height: 100, // Defina a altura do gradiente
+        height: 100,
       },
       nome: {
         color: "#ffffff",
@@ -52,14 +52,28 @@ const styles = StyleSheet.create({
       },
       cards: {
         alignSelf: "center",
-        borderRadius: 20, // Para suavizar os cantos
-        shadowColor: "#000000", // Cor da sombra (iOS)
-        shadowOffset: { width: 0, height: 0 }, // Deslocamento da sombra (iOS)
-        shadowOpacity: 0.75, // Transparência da sombra (iOS)
-        shadowRadius: 20, // Desfoque da sombra (iOS)
-        elevation: 10, // Intensidade da sombra (Android)
+        borderRadius: 20,
+        shadowColor: "#000000",
+        shadowOffset: { width: 0, height: 0 },
+        shadowOpacity: 0.75,
+        shadowRadius: 20,
+        elevation: 10,
     },
-    
+    adicionarProduto: {
+      width: 70,
+      height: 70,
+      backgroundColor: "#ffffff",
+      borderRadius: 50,
+      marginTop: 30,
+      alignSelf: 'center'
+    },
+    adicionarProdutoTexto: {
+      color: '#ff4400',
+      fontWeight: 800,
+      fontSize: 60,
+      textAlign: "center",
+      marginTop: -13
+    }
 });
 
 export default styles;

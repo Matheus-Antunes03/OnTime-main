@@ -8,8 +8,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   backButton: {
-    position: 'absolute',  // Posiciona o botão de voltar fora do fluxo principal
-    left: 10,              // Define a posição à esquerda
+    position: 'absolute',
+    left: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },

@@ -5,7 +5,7 @@ import styles from './styles';
 export function Card_Mapa({ navigation }) {
   return (
     <View>
-      <TouchableOpacity onPress={() => navigation.navigate('Estabelecimento')} style={styles.container}>
+      <TouchableOpacity onPress={() => navigation.navigate('Estabelecimento_Perfil')} style={styles.container}>
         <Text style={styles.nome}>Supermercado Centro</Text>
         <View style={styles.lado}>
           <View style={styles.lista}>

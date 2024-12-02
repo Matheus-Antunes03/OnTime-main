@@ -42,14 +42,15 @@ const styles = StyleSheet.create({
     width: 200,
     height: 60,
     backgroundColor: "#ff4400",
+    padding: 5,
+    borderRadius: 20,
+    marginTop: 40
+  },
+  texto: {
     fontSize: 30,
     color: "#ffffff",
     fontWeight: 600,
     textAlign: "center",
-    fontFamily: "sans-serif",
-    padding: 15,
-    borderRadius: 20,
-    marginTop: 40
   }
 });
 
